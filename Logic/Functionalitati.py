@@ -1,4 +1,4 @@
-from Domain import Cheltuiala, AsociatieProprietari
+from Logic.CRUD import AsociatieProprietari
 
 
 class Logic:

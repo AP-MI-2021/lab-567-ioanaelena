@@ -1,5 +1,4 @@
-from Domain import Cheltuiala, AsociatieProprietari
-from Logic import Logic
+from Domain.cheltuiala import Cheltuiala
 
 
 def test_get_suma():
@@ -19,7 +18,7 @@ def test_get_tip():
 
 
 
-if __name__ == '__main__':
+def testAll():
     test_get_suma()
     test_get_numar_apartament()
     test_get_tip()
