@@ -1,34 +1,28 @@
 
-class Cheltuiala:
-    numar_apartament: int
-    suma: int
-    data: str
-    tip: str  # poate avea valori din {intretinere, canal, alte cheltuieli}
 
-    def __init__(self, nr_apartament: int, suma: int, tip: str, data: str): #constructor
-        self.numar_apartament = nr_apartament
-        self.suma = suma
-        self.tip = tip
-        self.data = data
+def create_cheltuiala(nr_apartament, suma, tip, data):
+    return {'nr_apartament': nr_apartament, 'suma': suma, 'tip': tip, 'data': data}
 
-    def __str__(self): #reprezentare string pentru a printa obiectul
-        string_to_show = 'Apartament ' + str(self.numar_apartament) + ': ' + str(self.suma) + ' lei, pentru ' + self.tip + ' ' + self.data
-        return string_to_show
+def get_numar_apartament(cheltuiala):
+    return int(cheltuiala['nr_apartament'])
 
-    def __repr__(self): #reprezentare string pentru a printa obiectul
-        string_to_show = 'Apartament ' + str(self.numar_apartament) + ': ' + str(
-            self.suma) + ' lei, pentru ' + self.tip + ' ' + self.data
-        return string_to_show
+def get_suma(cheltuiala):
+    return int(cheltuiala['suma'])
 
-    def get_numar_apartament(self):
-        return self.numar_apartament
+def get_tip(cheltuiala):
+    return cheltuiala['tip']
 
-    def get_suma(self):
-        return self.suma
+def get_data(cheltuiala):
+    return cheltuiala['data']
 
-    def get_tip(self):
-        return self.tip
+def set_suma(cheltuiala, suma_noua):
+    cheltuiala['suma'] = suma_noua
 
-    def get_data(self):
-        return self.data
+def set_tip(cheltuiala, tip_nou):
+    cheltuiala['tip'] = tip_nou
 
+
+def to_str(cheltuiala):  # reprezentare string pentru a printa cheltuiala
+    string_to_show = 'Apartament ' + str(get_numar_apartament(cheltuiala)) + ': ' + str(
+        get_suma(cheltuiala)) + ' lei, pentru ' + get_tip(cheltuiala) + ' , data: ' + get_data(cheltuiala)
+    return string_to_show
