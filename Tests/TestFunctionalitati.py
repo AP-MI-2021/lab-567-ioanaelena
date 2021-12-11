@@ -18,7 +18,11 @@ def test_get_tip():
 
 
 
+
+
+
 def testAll():
     test_get_suma()
     test_get_numar_apartament()
     test_get_tip()
+    test_undo()
